@@ -17,6 +17,7 @@ class PrecioController extends Controller
 
       // funciona
       $result = DB::table('products')->where('use',$uso)->where('thickness',$espesor)->get();
+      
       foreach ($result as $result1) {
       }
 
@@ -36,17 +37,6 @@ class PrecioController extends Controller
 
       $precioUnit=(($costoMaterial+$utilidad+$costoFlete+$costoImport+$costoIndirect)/$cantidad)*20;
       $precioTotal=$precioUnit*$cantidad;
-
-      // parte decimal
-
-
-      // parte miles
-
-
-      // parte millones
-
-
-
 
 
       echo($precioTotal);

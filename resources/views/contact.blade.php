@@ -14,6 +14,8 @@
       <!-- white full width arrow object -->
       <img class="arrow-object" src="img/arrow-object-white.svg" alt="">
     </header>
+
+    
     
     <!-- Section 1 -->
     <section class="section background-white">
@@ -40,7 +42,7 @@
                 </div>
                 <div class="margin-left-60">
                   <h2 class="text-size-20 margin-bottom-10 text-strong">E-mail</h2>                
-                  <p><a class="text-primary-hover" href="mailto:contact@panelmexico.com">contact@panelmexico.com</a></p>               
+                  <p><a class="text-primary-hover" href="mailto:contacto@panelmexico.com">contacto@panelmexico.com</a></p>               
                 </div>
               </div>
               
@@ -56,52 +58,59 @@
             </div>
           </div>
           <div class="m-12 l-6">
-          
-            <!-- <h2 class="text-size-20 margin-bottom-10 margin-m-top-50 text-strong">Functional Ajax Contact Form</h2> -->
-            <!-- If you want to make a field required, add the "required" class to the input. -->
-            <!-- The form e-mail address you can change on file resp-email.php on line 4. -->
-            <form name="contactForm" class="customform ajax-form" method="post" enctype="multipart/form-data">
+
+            <!-- <form name="contactForm" class="customform ajax-form text-white" method="post" enctype="multipart/form-data"> -->
+            <!-- <form name="contactForm" class="customform needs-validation" action="{{ url('/contact2') }}" method="post" enctype="multipart/form-data" novalidate> -->
+            <form name="contactForm" class="customform needs-validation" action="{{ url('/contact2') }}" method="post" enctype="multipart/form-data" novalidate>
+              {{ csrf_field() }}
               <div class="line">
                 <div class="margin">
                   <div class="s-12 m-12 l-6">
-                    <input name="email" class="required email" placeholder="Your e-mail" title="Your e-mail" type="text" />
-                    <p class="email-error form-error">Please enter your e-mail.</p>
+                    <input id="email" name="email" value="{{ old('email') }}" class="required email" placeholder="correo" title="Your e-mail" type="text" required/>
+                    <!-- <p class="email-error form-error">correo</p> -->
                   </div>
                   <div class="s-12 m-12 l-6">
-                    <input name="name" class="name" placeholder="Your name" title="Your name" type="text" />
-                    <p class="name-error form-error">Please enter your name.</p>
+                    <input id="name" name="name" value="{{ old('name') }}" class="name" placeholder="nombre" title="Your name" type="text" />
+                    <!-- <p class="name-error form-error">nombre</p> -->
                   </div>
                 </div>
-              </div>            
-                              
+              </div> 
+
               <div class="line">       
                 <div class="s-12">
-                  <input name="subject" class="required subject" placeholder="Subject" title="Subject" type="text" />
-                  <p class="subject-error form-error">Please enter your subject.</p>
+                  <textarea id="message" name="message" class="required message" placeholder="mensaje" rows="5" cols="50" type="text" required>{{ old('message') }}</textarea>
+                  <!-- <p class="message-error form-error">mensaje</p> -->
                 </div>
-                <div class="s-12">
-                  <textarea name="message" class="required message" placeholder="Your message" rows="3"></textarea>
-                  <p class="message-error form-error">Please enter your message.</p>
-                </div>
-                <div class="s-12">
-                  <input type="file" name="file[]" />                    
-                </div>
+                
                 <!-- full-name-field is hidden antirobot field -->
                 <input name="full-name-field" type="text" id="full-name-field" class="full-name-field" />
                 <div class="s-12">
-                  <a class="captcha-button text-white background-green border-radius margin-bottom">
+                   <a class="captcha-button text-white background-primary border-radius margin-bottom">
                     <span class="not-a-robot-icon"><i class="icon-check text-white"></i></span> 
-                    <span class="not-a-robot-text">Enviar</span>
+                    <span class="not-a-robot-text">I'm not a robot</span>
                   </a>
-                </div> 
-                <!-- The submit button text you can edit in the file validation.sj on the line 8. -->
-                <div class="s-12 button-parent"></div>
-                <div class="line">
-                  <p class="mail-success form-success">Your message has been sent successfully.</p>
-                  <p class="mail-fail form-error">Sorry, error occured this time sending your message.</p>
                 </div>
+                <div class="s-12 button-parent"></div>
+                @if (session('notification'))
+                <div class="line">
+                  <p class="padding background-green text-white s-12">{{ session('notification') }}</p>
+                </div>
+                @endif
+
+                @if ($errors->any())
+                <div class="padding background-red text-white s-12">
+                  <p class="mail-fail form-error">
+                    <ul>
+                      @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                      @endforeach
+                    </ul>
+                  </p>
+                </div>
+                @endif       
               </div>    
             </form>
+
           </div>
         </div>
       </div>    
@@ -112,3 +121,6 @@
 
 
 @endsection
+
+
+

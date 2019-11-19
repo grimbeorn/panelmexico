@@ -49,6 +49,10 @@
           </div>                                                                                                                                                  
         </div>
         <a class="button rounded-btn background-aqua text-white text-size-12 center margin-top-30 text-strong" href="{{ url('/cotizador') }}">COTIZAR</a>
+        <a class="button rounded-btn background-pink text-white text-size-12 center margin-top-30 text-strong" href="{{ url('/cotizador') }}">DESCARGAR FICHA</a>
+        <!-- <div class="s-12 m-12 l-12 margin-bottom">
+          <button id="btn2" name="btn2" class="button background-pink border-radius s-12">DESCARGAR FICHA</button>
+        </div> -->
       </div> 
       <!-- Right Column -->
       <div class="s-12 m-12 l-4"> 

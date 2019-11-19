@@ -6,7 +6,6 @@
 
   <article>    
     <!-- Header -->
-    <!-- <header class="section background-image text-center" style="background-image:url(img/original/ahorro_001.jpeg)"> -->
     <header class="section background-image text-center" style="background-image:url(img/reducido/ahorro02.jpg)">
       <h1 class="animated-element slow text-extra-thin text-white text-s-size-30 text-m-size-40 text-size-50 text-line-height-1 margin-bottom-30 margin-top-130">
         AHORRO
@@ -17,54 +16,19 @@
     <!-- Section 1 -->
     <section class="section-small-padding background-white text-center">      
       <div class="line">
-        <!-- https://www.myresponsee.com/responsive-framework-doc/font-icon-set/ -->
-        <!-- <i class="icon-sli-info text-primary text-size-40"></i> -->
         <h2 class="text-dark text-size-50 text-m-size-40">¿ Cuánto <b>Cuesta ?</b></h2>
       </div>                                                                                                    
     </section>
-
-    <a href="mensajeEnviar" id="mensajeEnviar">
-      <div class="margin2x">
-      @if (session('notification'))
-        <div class="padding text-left" style="background-color:#F0FFF0">
-          <!-- <div class="alert alert-success"> -->
-          <ul>
-            <li style="color:#008000">{{ session('notification') }}</li>
-          </ul>
-        </div>
-      @endif
-      @if ($errors->any())
-        <div class="padding text-left" style="background-color:#FFE4E1">
-        <!-- <div class="alert alert-danger"> -->
-          <ul>
-            @foreach ($errors->all() as $error)
-              <li style="color:#8B0000">{{ $error }}</li>
-            @endforeach
-          </ul>
-        </div>
-      @endif
-      </div>
-    </a>
 
     <section class="section background-white">
       <div class="line">
         <div class="margin2x">
           <div class="m-12 l-6">          
-            <h2 class="text-size-20 margin-bottom-10 margin-m-top-50 text-strong">Por favor ingrese los siguientes datos:</h2>
-            <form name="contactForm" class="customform" method="post" action="{{ url('/precio') }}" enctype="multipart/form-data">
-              <!-- {{ csrf_field() }} -->
-              <!-- <div class="line">
-                <div class="margin">
-                  <div class="s-12 m-12 l-12">
-                    <input name="name" class="name" placeholder="Your name" title="Your name" type="text" />
-                    <p class="name-error form-error">Please enter your name.</p>
-                  </div>
-                  <div class="s-12 m-12 l-12">
-                    <input name="email" class="required email" placeholder="Your e-mail" title="Your e-mail" type="text" />
-                    <p class="email-error form-error">Please enter your e-mail.</p>
-                  </div>
-                </div>
-              </div> -->               
+            <!-- <h2 class="text-size-20 margin-bottom-10 margin-m-top-50 text-strong">Por favor ingrese los siguientes datos:</h2> -->
+            
+            <!-- <form name="quoteForm" class="customform needs-validation" action="{{ url('/quote') }}" method="post" enctype="multipart/form-data" novalidate> -->
+            <form name="quoteForm" class="customform needs-validation" action="{{ url('/quote') }}" method="post" enctype="multipart/form-data" novalidate>
+              {{ csrf_field() }}            
               <div class="line">       
                 <div class="s-12">
                   <select id="use" name="use" onchange="ChangeUseList(); myFunction()" class="form-control required">
@@ -80,37 +44,58 @@
                   </select>
                 </div>
                 <div class="s-12">
-                  <input id="cantidad" oninput="myFunction()" name="cantidad" class="form-group required" placeholder="cantidad [m2]">
+                  <!-- <input id="cantidad" oninput="myFunction()" name="cantidad" class="form-group required" placeholder="cantidad [m2]"> -->
+                  <input id="cantidad" oninput="myFunction()" name="cantidad" class="form-group required" placeholder="cantidad [m2]" value="999">
                 </div>
                 <input name="full-name-field" type="text" id="full-name-field" class="full-name-field" />
+                <div class="line">
+                  <div class="margin">
+                    <div class="s-12 m-12 l-6">
+                      <!-- <input id="email" name="email" value="{{ old('email') }}" class="required email" placeholder="correo" title="Your e-mail" type="text" required/> -->
+                      <input id="email" name="email" value="hernandomtz@gmail.com" class="required email" placeholder="correo" title="Your e-mail" type="text" required/>
+                    </div>
+                    <div class="s-12 m-12 l-6">
+                      <!-- <input id="name" name="name" value="{{ old('name') }}" class="name" placeholder="nombre" title="Your name" type="text" /> -->
+                      <input id="name" name="name" value="dae" class="name" placeholder="nombre" title="Your name" type="text" />
+                    </div>
+                  </div>
+                </div>
+                <div class="s-12">
+                  <a class="captcha-button text-white background-primary border-radius margin-bottom">
+                    <span class="not-a-robot-icon"><i class="icon-check text-white"></i></span> 
+                    <span class="not-a-robot-text">Enviarme esta cotización</span>
+                  </a>
+                </div>
+                <div class="s-12 button-parent"></div> 
+
+                @if (session('notification'))
+                <div class="line">
+                  <p class="padding background-green text-white s-12">{{ session('notification') }}</p>
+                </div>
+                @endif
+
               </div>
-                  
             </form>
+
           </div>
 
           <div class="m-12 l-6">
-              <div class="line">
-                <div class="l-12 xl-9 center">
-                  <div class="s-12 m-12 l-12"> 
-                    <div class="animated-element pricing-recommended pricing-table margin-bottom-30">
-                      <!-- @if (session('cantidad'))
-                        <p class="pricing-price text-dark text-strong margin-bottom-10 text-center">$ <span id="price" class="timer" data-from="0" data-to="{{ session('cantidad') }}" data-speed="2000" data-decimals="2"></span> MXN</p>
-                      @else
-                        <p class="pricing-price text-dark text-strong margin-bottom-10 text-center">$ <span id="price" class="timer" data-from="0" data-to="0" data-speed="2000" data-decimals="2"></span> MXN</p>
-                      @endif -->
-                      <p id="p01" name="p01" class="pricing-price text-dark text-strong margin-bottom-10 text-center"> 
-                        <span id="price" name="price">0.00</span> MXN
-                      </p>
-                      <!-- <p class="pricing-price text-dark text-strong margin-bottom-10 text-center">$ <span id="price" class="timer" data-from="0" data-to="0" data-speed="2000" data-decimals="2"></span> MXN</p> -->
-                      <ul id="features">
-                      </ul>
-                        <button id="btn1" name="btn1" class="button rounded-btn background-aqua text-white text-size-12 center margin-top-30 text-strong">ENVIARME ESTA COTIZACIÓN</button>
-                        <button id="btn2" name="btn2" class="button rounded-btn background-pink text-white text-size-12 center margin-top-30 text-strong">DESCARGAR FICHA</button>
-                    </div> 
+            <div class="line">
+              <div class="l-12 xl-9 center">
+                <div class="s-12 m-12 l-12"> 
+                  <div class="animated-element pricing-recommended pricing-table margin-bottom-30">
+                    <p id="p01" name="p01" class="pricing-price text-dark text-strong margin-bottom-10 text-center"> 
+                      <span id="price" name="price">0.00</span> MXN
+                    </p>
+                    <ul id="features">
+                    </ul>
+                    
                   </div> 
-                </div>  
-              </div>       
+                </div> 
+              </div>  
+            </div>       
           </div>
+
         </div>
       </div>    
     </section>
@@ -124,15 +109,12 @@
 $(document).ready(function() {
   var cantidad2 = document.getElementById("cantidad").value;
   if (cantidad2==0 || cantidad2 =="" || cantidad2 =="0"){
-    //console.log("cantidad igual a cero");
     document.getElementById("price").innerHTML = "$ 0.00";
   }
 });
 </script>
 
 <script type="text/javascript">
-
-
   var useAndThickness = {};
   useAndThickness['cubierta'] = ['30 mm', '40 mm', '50 mm','60 mm','80 mm','100 mm','120 mm'];
   useAndThickness['fachada'] = ['35 mm', '40 mm', '50 mm','60 mm','80 mm'];
@@ -171,7 +153,6 @@ $(document).ready(function() {
       }
     }
   } 
-
 </script>
 
 <script type="text/javascript">
@@ -181,8 +162,8 @@ function myFunction() {
   var espesor = a3.options[a3.selectedIndex].text;
   var cantidad = document.getElementById("cantidad").value;
 
+
   if (cantidad==0 || cantidad =="" || cantidad=="0" || uso=="Uso"){
-    // console.log("cantidad igual a cero");
     document.getElementById("price").innerHTML = "$ 0.00";
   } else {
     $.ajax({
@@ -204,9 +185,7 @@ function myFunction() {
     }); 
   }
 }
-
 </script>
-
 
 
 

@@ -27,4 +27,7 @@ Route::get('/contacto', function () {
 Route::post('/precio', 'PrecioController@send');
 
 Route::post('/contact2', 'contact2Controller@send');
-Route::post('/presupuestos2', 'presupuestos2Controller@send');
+
+// Route::post('/quote', 'QuoteController@get_customer_data');
+Route::post('/quote', 'QuoteController@index');
+

@@ -6,12 +6,14 @@
     <title>Panel México | Panel Industrial</title>
     <!-- <link rel="shortcut icon" type="image/png" href="{{ asset('favicon.png') }}"> -->
     <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/responsee.css">
     <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="owl-carousel/owl.theme.css">
     <link rel="stylesheet" href="css/lightcase.css">
+    <!-- <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet"> -->
     <!-- CUSTOM STYLE -->      
     <link rel="stylesheet" href="css/template-style.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,700,900&amp;subset=latin-ext" rel="stylesheet"> 
@@ -132,6 +134,9 @@
         </div>  
       </section>
     </footer>
+    <!-- <script src="{{ asset('js/bootstrap.min.js') }}"></script> -->
+    <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    // <script type="text/javascript" src="js/jquery.min.js"></script> -->
     <script type="text/javascript" src="js/responsee.js"></script>
     <script type="text/javascript" src="js/plugins.min.js"></script>
     <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
