@@ -3,7 +3,6 @@
 @section('content')
 <!-- MAIN -->
 <main role="main">
-
   <article>    
     <!-- Header -->
     <header class="section background-image text-center" style="background-image:url(img/reducido/ahorro02.jpg)">
@@ -19,14 +18,10 @@
         <h2 class="text-dark text-size-50 text-m-size-40">¿ Cuánto <b>Cuesta ?</b></h2>
       </div>                                                                                                    
     </section>
-
     <section class="section background-white">
       <div class="line">
         <div class="margin2x">
           <div class="m-12 l-6">          
-            <!-- <h2 class="text-size-20 margin-bottom-10 margin-m-top-50 text-strong">Por favor ingrese los siguientes datos:</h2> -->
-            
-            <!-- <form name="quoteForm" class="customform needs-validation" action="{{ url('/quote') }}" method="post" enctype="multipart/form-data" novalidate> -->
             <form name="quoteForm" class="customform needs-validation" action="{{ url('/quote') }}" method="post" enctype="multipart/form-data" novalidate>
               {{ csrf_field() }}            
               <div class="line">       
@@ -44,19 +39,16 @@
                   </select>
                 </div>
                 <div class="s-12">
-                  <!-- <input id="cantidad" oninput="myFunction()" name="cantidad" class="form-group required" placeholder="cantidad [m2]"> -->
-                  <input id="cantidad" oninput="myFunction()" name="cantidad" class="form-group required" placeholder="cantidad [m2]" value="999">
+                  <input id="cantidad" oninput="myFunction()" name="cantidad" class="form-group required" placeholder="cantidad [m2]">
                 </div>
                 <input name="full-name-field" type="text" id="full-name-field" class="full-name-field" />
                 <div class="line">
                   <div class="margin">
                     <div class="s-12 m-12 l-6">
-                      <!-- <input id="email" name="email" value="{{ old('email') }}" class="required email" placeholder="correo" title="Your e-mail" type="text" required/> -->
-                      <input id="email" name="email" value="hernandomtz@gmail.com" class="required email" placeholder="correo" title="Your e-mail" type="text" required/>
+                      <input id="email" name="email" value="{{ old('email') }}" class="required email" placeholder="correo" title="Your e-mail" type="text" required/>
                     </div>
                     <div class="s-12 m-12 l-6">
-                      <!-- <input id="name" name="name" value="{{ old('name') }}" class="name" placeholder="nombre" title="Your name" type="text" /> -->
-                      <input id="name" name="name" value="dae" class="name" placeholder="nombre" title="Your name" type="text" />
+                      <input id="name" name="name" value="{{ old('name') }}" class="name" placeholder="nombre" title="Your name" type="text" />
                     </div>
                   </div>
                 </div>
@@ -67,18 +59,14 @@
                   </a>
                 </div>
                 <div class="s-12 button-parent"></div> 
-
                 @if (session('notification'))
                 <div class="line">
                   <p class="padding background-green text-white s-12">{{ session('notification') }}</p>
                 </div>
                 @endif
-
               </div>
             </form>
-
           </div>
-
           <div class="m-12 l-6">
             <div class="line">
               <div class="l-12 xl-9 center">
@@ -89,21 +77,16 @@
                     </p>
                     <ul id="features">
                     </ul>
-                    
                   </div> 
                 </div> 
               </div>  
             </div>       
           </div>
-
         </div>
       </div>    
     </section>
-    
   </article>
-
 </main>
-
 
 <script type="text/javascript">
 $(document).ready(function() {
@@ -162,7 +145,6 @@ function myFunction() {
   var espesor = a3.options[a3.selectedIndex].text;
   var cantidad = document.getElementById("cantidad").value;
 
-
   if (cantidad==0 || cantidad =="" || cantidad=="0" || uso=="Uso"){
     document.getElementById("price").innerHTML = "$ 0.00";
   } else {
@@ -179,7 +161,6 @@ function myFunction() {
           currency: 'USD',
         });
         var price = formatter.format(r);
-        console.log(price);
         document.getElementById("price").innerHTML = price;
       }
     }); 
@@ -187,7 +168,4 @@ function myFunction() {
 }
 </script>
 
-
-
-	
 @endsection
