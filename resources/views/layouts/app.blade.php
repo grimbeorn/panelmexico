@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="owl-carousel/owl.theme.css">
     <link rel="stylesheet" href="css/lightcase.css">
-    <!-- <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet"> -->
     <!-- CUSTOM STYLE -->      
     <link rel="stylesheet" href="css/template-style.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,700,900&amp;subset=latin-ext" rel="stylesheet"> 
@@ -21,6 +20,7 @@
     <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
     <script type="text/javascript" src="js/validation.js"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    
   </head>
 
   <body class="size-1280 primary-color-light-blue">
@@ -48,9 +48,9 @@
                 <li> 
                   <a>Productos</a>
                   <ul>
-                    <li><a href="{{ url('/cubierta') }}">Panel de Cubierta</a></li>
-                    <li><a href="{{ url('/fachada') }}">Panel de Fachada</a></li>
-                    <li><a href="{{ url('/refrigeracion') }}">Panel de Refrigeración</a></li>
+                    <li><a href="/fachada#acubierta">Panel de Cubierta</a></li>
+                    <li><a href="/fachada#afachada">Panel de Fachada</a></li>
+                    <li><a href="/fachada#arefrigeracion">Panel de Refrigeración</a></li>
                   </ul>
                 </li>
              </ul>
@@ -101,7 +101,7 @@
             </div>
             <div class="s-12 m-6 l-3 xl-2">
                <h4 class="text-white text-strong margin-m-top-30">Links</h4>      
-               <a class="text-primary-hover" href="{{ url('/contacto') }}">Contact Us</a><br>
+               <a class="text-primary-hover" href="{{ url('/contacto') }}">Contacto</a><br>
             </div>
             <div class="s-12 m-6 l-3 xl-2">
                <h4 class="text-white text-strong margin-m-top-30">Términos de Uso</h4>

@@ -3,7 +3,7 @@
 @section('content')
 <main role="main"> 
 	<!-- Header -->
-	<header class="section background-image text-center" style="background-image:url(img/adobe02/3.jpeg)">
+	<header class="section background-image text-center" style="background-image:url(img/bigStockFoto/2.jpg)">
 	  <h1 class="animated-element slow text-extra-thin text-white text-s-size-30 text-m-size-40 text-size-50 text-line-height-1 margin-bottom-30 margin-top-130">PANEL MÉXICO</h1>
 	  <p class="animated-element text-white">Expertos en Panel</p>
 	  <img class="arrow-object" src="img/arrow-object-white.svg" alt="">
@@ -32,7 +32,7 @@
           <div class="margin margin-bottom-0">
             <div class="s-12 m-12 l-12">
               <a class="image-hover-zoom margin-m-bottom-30" href="/">
-                <img src="img/adobe02/8.jpeg" alt="">
+                <img src="img/bigStockFoto/5a.jpg" alt="">
               </a>  
             </div>
           </div>    
