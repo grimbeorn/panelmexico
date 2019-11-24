@@ -1,15 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-<!-- MAIN -->
 <main role="main">
   <article>    
     <!-- Header -->
     <header class="section background-image text-center" style="background-image:url(img/bigStockFoto/1a.jpg)">
       <h1 class="animated-element slow text-extra-thin text-white text-s-size-30 text-m-size-40 text-size-50 text-line-height-1 margin-bottom-30 margin-top-130">
-        AHORRO
+        PRESUPUESTOS
       </h1>
-      <p class="animated-element text-white">Expertos en Ahorros Energéticos</p>
+      <p class="animated-element text-white">Nuestros Precios</p>
       <img class="arrow-object" src="img/arrow-object-white.svg" alt="">
     </header>
     <!-- Section 1 -->
@@ -18,7 +17,7 @@
         <h2 class="text-dark text-size-50 text-m-size-40">¿ Cuánto <b>Cuesta ?</b></h2>
       </div>                                                                                                    
     </section>
-    <section class="section background-white">
+    <section class="section background-white" style="padding: 15px;">
       <div class="line">
         <div class="margin2x">
           <div class="m-12 l-6">          
@@ -57,7 +56,7 @@
                   </div>
                 </div>
                 <div class="s-12">
-                  <a class="captcha-button text-white background-primary border-radius margin-bottom">
+                  <a class="captcha-button text-white background-green border-radius margin-bottom">
                     <span class="not-a-robot-icon"><i class="icon-check text-white"></i></span> 
                     <span class="not-a-robot-text">Enviarme esta cotización</span>
                   </a>
@@ -88,7 +87,7 @@
                 <div class="s-12 m-12 l-12"> 
                   <div class="animated-element pricing-recommended pricing-table margin-bottom-30">
                     <p id="p01" name="p01" class="pricing-price text-dark text-strong margin-bottom-10 text-center"> 
-                      <span id="price" name="price">0.00</span> MXN
+                      <span id="price" name="price">0.00</span> MXN *
                     </p>
                     <ul id="features">
                     </ul>

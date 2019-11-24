@@ -129,7 +129,7 @@
             <!-- <p class="text-size-12">All images have been purchased from Bigstock. Do not use the images in your website.</p> -->
           </div>
           <div class="s-12 l-6">
-            <a class="right text-size-12 text-primary-hover" href="http://www.myresponsee.com" title="Responsee - lightweight responsive framework">Design and coding<br> by Orange Code</a>
+            <a class="right text-size-12 text-primary-hover" title="Responsee - lightweight responsive framework">Design and coding<br> by Orange Code</a>
           </div>
         </div>  
       </section>

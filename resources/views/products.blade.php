@@ -8,9 +8,12 @@
     <h1 class="animated-element slow text-extra-thin text-white text-s-size-30 text-m-size-40 text-size-50 text-line-height-1 margin-bottom-30 margin-top-130">
       PRODUCTOS
     </h1>
+    <p class="animated-element text-white">Cubierta / Fachada / Refrigeración</p>
     <!-- <p class="animated-element text-white">Panel para Cubiertas</p> -->
     <img class="arrow-object" src="img/arrow-object-white.svg" alt="">
   </header>
+
+  
 
 <section class="section background-white" name="acubierta" id="acubierta">        
   <div class="line text-center">

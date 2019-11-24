@@ -7,9 +7,9 @@
     <!-- Header -->
     <header class="section background-image text-center" style="background-image:url(img/bigStockFoto/4a.jpg)">
       <h1 class="animated-element slow text-extra-thin text-white text-s-size-30 text-m-size-40 text-size-50 text-line-height-1 margin-bottom-30 margin-top-130">
-        Contact Us
+        CONTACTO
       </h1>
-      <p class="animated-element text-white">Duis autem vel eum iriure dolor in hendrerit in</p>
+      <p class="animated-element text-white">Encuéntranos</p>
       
       <!-- white full width arrow object -->
       <img class="arrow-object" src="img/arrow-object-white.svg" alt="">
@@ -18,7 +18,12 @@
     
     
     <!-- Section 1 -->
-    <section class="section background-white">
+    <section class="section-small-padding background-white text-center">      
+      <div class="line">
+        <h2 class="text-dark text-size-50 text-m-size-40">¿ Dónde <b>Encontrarnos ?</b></h2>
+      </div>                                                                                                    
+    </section>
+    <section class="section background-white" style="padding: 15px;">
       <div class="line">
         <div class="margin2x">
           <div class="m-12 l-6">
@@ -85,9 +90,9 @@
                 <!-- full-name-field is hidden antirobot field -->
                 <input name="full-name-field" type="text" id="full-name-field" class="full-name-field" />
                 <div class="s-12">
-                   <a class="captcha-button text-white background-primary border-radius margin-bottom">
+                   <a class="captcha-button text-white background-green border-radius margin-bottom">
                     <span class="not-a-robot-icon"><i class="icon-check text-white"></i></span> 
-                    <span class="not-a-robot-text">I'm not a robot</span>
+                    <span class="not-a-robot-text">No soy un Robot</span>
                   </a>
                 </div>
                 <div class="s-12 button-parent"></div>
