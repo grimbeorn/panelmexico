@@ -227,17 +227,17 @@ class quoteController extends Controller
 
       $pdf = \App::make('dompdf.wrapper');
       $pdf->loadHTML($output);
-      return $pdf->stream();
+      //return $pdf->stream();
 
-      // $a = 'quote'.time().'.'.'pdf';
+      $a = 'quote'.time().'.'.'pdf';
 
-      // Storage::put($a, $pdf->stream());
+      Storage::put($a, $pdf->stream());
 
-      // $emails=[$c,'hernandomtz@gmail.com'];
-      // Mail::to($emails)->send(new FileDownloaded($a));
+      $emails=[$c,'hernandomtz@gmail.com'];
+      Mail::to($emails)->send(new FileDownloaded($a));
 
-      // $notification = "el correo ha sido enviado";
-      // return back()->with(compact('notification'));
+      $notification = "el correo ha sido enviado";
+      return back()->with(compact('notification'));
     
 
   }

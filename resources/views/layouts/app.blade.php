@@ -82,11 +82,11 @@
     </main>
     
     <!-- Social -->
-    <div class="background-primary padding text-center">
+    <!-- <div class="background-primary padding text-center">
       <a href="/"><i class="icon-facebook_circle text-size-25 text-blue"></i></a> 
       <a href="/"><i class="icon-instagram_circle text-size-25 text-blue"></i></a> 
       <a href="/"><i class="icon-linked_in_circle text-size-25 text-blue"></i></a>                                                                       
-    </div>
+    </div> -->
     <!-- FOOTER -->
     <footer>
       <!-- Main Footer -->
