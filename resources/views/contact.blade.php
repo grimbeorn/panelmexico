@@ -20,7 +20,7 @@
     <!-- Section 1 -->
     <section class="section-small-padding background-white text-center">      
       <div class="line">
-        <h2 class="text-dark text-size-50 text-m-size-40">¿ Dónde <b>Encontrarnos ?</b></h2>
+        <h2 class="text-dark text-size-50 text-m-size-40">¿ Dónde <b>Estamos ?</b></h2>
       </div>                                                                                                    
     </section>
     <section class="section background-white" style="padding: 15px;">
