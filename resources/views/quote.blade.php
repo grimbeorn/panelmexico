@@ -55,11 +55,14 @@
                     </div>
                   </div>
                 </div>
-                <div class="s-12">
-                  <a class="captcha-button text-white background-green border-radius margin-bottom">
+                <!-- <div class="s-12">
+                  <a class="captcha-button text-white background-primary border-radius margin-bottom">
                     <span class="not-a-robot-icon"><i class="icon-check text-white"></i></span> 
-                    <span class="not-a-robot-text">Enviarme esta cotización</span>
+                    <span class="not-a-robot-text">no soy un robot</span>
                   </a>
+                </div> -->
+                <div class="s-12">
+                    <button class="button background-yellow border-radius s-12">enviar</button>
                 </div>
                 <div class="s-12 button-parent"></div> 
                 @if (session('notification'))

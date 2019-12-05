@@ -20,6 +20,7 @@
     <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
     <script type="text/javascript" src="js/validation.js"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    {!! htmlScriptTagJsApi(['action' => 'homepage']) !!}
     
   </head>
 

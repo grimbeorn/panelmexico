@@ -90,9 +90,9 @@
                 <!-- full-name-field is hidden antirobot field -->
                 <input name="full-name-field" type="text" id="full-name-field" class="full-name-field" />
                 <div class="s-12">
-                   <a class="captcha-button text-white background-green border-radius margin-bottom">
+                   <a class="captcha-button text-white background-primary border-radius margin-bottom">
                     <span class="not-a-robot-icon"><i class="icon-check text-white"></i></span> 
-                    <span class="not-a-robot-text">No soy un Robot</span>
+                    <span class="not-a-robot-text">no soy un Robot</span>
                   </a>
                 </div>
                 <div class="s-12 button-parent"></div>
