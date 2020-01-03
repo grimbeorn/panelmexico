@@ -68,6 +68,7 @@
             <!-- <form name="contactForm" class="customform needs-validation" action="{{ url('/contact2') }}" method="post" enctype="multipart/form-data" novalidate> -->
             <form name="contactForm" class="customform needs-validation" action="{{ url('/contact2') }}" method="post" enctype="multipart/form-data" novalidate>
               {{ csrf_field() }}
+              <div class="g-recaptcha" data-sitekey="6LfSJcYUAAAAAJtFKt99pLk_c1E7HuGSj0aIk89Z"></div>
               <div class="line">
                 <div class="margin">
                   <div class="s-12 m-12 l-6">
