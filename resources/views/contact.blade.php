@@ -68,7 +68,6 @@
             <!-- <form name="contactForm" class="customform needs-validation" action="{{ url('/contact2') }}" method="post" enctype="multipart/form-data" novalidate> -->
             <form name="contactForm" class="customform needs-validation" action="{{ url('/contact2') }}" method="post" enctype="multipart/form-data" novalidate>
               {{ csrf_field() }}
-              <div class="g-recaptcha" data-sitekey="6LdLE8wUAAAAAEepO6CsC2zJvWUsp1Hn2Zx96WYW"></div>
               <div class="line">
                 <div class="margin">
                   <div class="s-12 m-12 l-6">
@@ -91,12 +90,11 @@
                 <!-- full-name-field is hidden antirobot field -->
                 <input name="full-name-field" type="text" id="full-name-field" class="full-name-field" />
                 <div class="s-12">
-                   <a class="captcha-button text-white background-primary border-radius margin-bottom">
-                    <span class="not-a-robot-icon"><i class="icon-check text-white"></i></span> 
-                    <span class="not-a-robot-text">no soy un Robot</span>
-                  </a>
+                  <div class="g-recaptcha" data-sitekey="6LdLE8wUAAAAAEepO6CsC2zJvWUsp1Hn2Zx96WYW"></div>
                 </div>
-                <div class="s-12 button-parent"></div>
+                <div class="s-12 button-parent">
+                  <button class="submit-form button border-radius text-white background-primary" type="submit">Enviar</button>
+                </div>
                 @if (session('notification'))
                 <div class="line">
                   <p class="padding background-green text-white s-12">{{ session('notification') }}</p>
