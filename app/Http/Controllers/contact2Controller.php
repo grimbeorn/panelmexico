@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Mail\NewContact2;
 use App\Http\Controllers\Input;
 use Mail;
+use App\Rules\ValidRecaptcha;
 
 class contact2Controller extends Controller
 {
@@ -19,7 +20,7 @@ class contact2Controller extends Controller
         $rules=[
             'email'=>'required',
             'message'=>'required',
-            'g-recaptcha-response' => 'required|captcha'
+            'g-recaptcha-response' => ['required', new ValidRecaptcha]
         ];
 
         $this->validate($request, $rules, $messages);
