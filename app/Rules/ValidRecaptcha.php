@@ -23,8 +23,8 @@ class ValidRecaptcha implements Rule
      */
     public function passes($attribute, $value)
     {
-        \Log::error('Captcha Value' . $value);
-        \Log::error('attribute' . $attribute);
+        \Log::error('env google recaptcha' . config('google_config.google_recaptcha_secret'));
+
         // Validate ReCaptcha
         $client = new Client([
             'base_uri' => 'https://google.com/recaptcha/api/'
