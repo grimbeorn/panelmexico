@@ -17,7 +17,8 @@ class contact2Controller extends Controller
         ];
         $rules=[
             'email'=>'required',
-            'message'=>'required'
+            'message'=>'required',
+            'g-recaptcha-response' => 'required|captcha'
         ];
 
         $this->validate($request, $rules, $messages);
@@ -26,7 +27,7 @@ class contact2Controller extends Controller
     	$c = $request->input('email');
     	$m = $request->input('message');
 
-    	Mail::to('hernandomtz@gmail.com')->send(new NewContact2($n, $c, $m));
+    	Mail::to('bermick@gmail.com')->send(new NewContact2($n, $c, $m));
         // Mail::to('diego@barrafrancamexico.com')->send(new NewContact2($n, $c, $t, $m));
 
 
