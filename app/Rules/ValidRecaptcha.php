@@ -31,7 +31,7 @@ class ValidRecaptcha implements Rule
         ]);
         $response = $client->post('siteverify', [
             'query' => [
-                'secret' => config('google_config.google_recaptcha_secret'),
+                'secret' => config('google.google_recaptcha_secret'),
                 'response' => $value
             ]
         ]);
