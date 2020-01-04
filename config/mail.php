@@ -9,8 +9,8 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Panelmexico'),
     ],
     'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-    'username' => env('MAIL_USERNAME'),
-    'password' => env('MAIL_PASSWORD'),
+    'username' => env('MAIL_USERNAME', 'contacto@panelmexico.com'),
+    'password' => env('MAIL_PASSWORD', ''),
     'sendmail' => '/usr/sbin/sendmail -bs',
     'markdown' => [
         'theme' => 'default',

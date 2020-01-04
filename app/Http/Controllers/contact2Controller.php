@@ -23,8 +23,6 @@ class contact2Controller extends Controller
             'g-recaptcha-response' => ['required', new ValidRecaptcha]
         ];
 
-        \Log::error('Request' . $request);
-
         $this->validate($request, $rules, $messages);
 
         $n = $request->input('name');

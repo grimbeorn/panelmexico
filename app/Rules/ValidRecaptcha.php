@@ -23,8 +23,6 @@ class ValidRecaptcha implements Rule
      */
     public function passes($attribute, $value)
     {
-        \Log::error('env google recaptcha' . config('services.google_recaptcha_secret'));
-
         // Validate ReCaptcha
         $client = new Client([
             'base_uri' => 'https://google.com/recaptcha/api/'
@@ -36,8 +34,6 @@ class ValidRecaptcha implements Rule
             ]
         ]);
 
-        \Log::error('Response' . $response->getBody());
-        \Log::error('JSON Response' . json_decode($response->getBody())->success);
         return json_decode($response->getBody())->success;
     }
     /**
