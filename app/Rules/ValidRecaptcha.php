@@ -33,6 +33,9 @@ class ValidRecaptcha implements Rule
                 'response' => $value
             ]
         ]);
+
+        \Log::debug('Response' . $response->getBody());
+        \Log::debug('JSON Response' . json_decode($response->getBody())->success);
         return json_decode($response->getBody())->success;
     }
     /**
