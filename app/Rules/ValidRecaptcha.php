@@ -23,7 +23,7 @@ class ValidRecaptcha implements Rule
      */
     public function passes($attribute, $value)
     {
-        \Log::error('env google recaptcha' . config('google_config.google_recaptcha_secret'));
+        \Log::error('env google recaptcha' . config('services.google_recaptcha_secret'));
 
         // Validate ReCaptcha
         $client = new Client([
@@ -31,7 +31,7 @@ class ValidRecaptcha implements Rule
         ]);
         $response = $client->post('siteverify', [
             'query' => [
-                'secret' => config('google.google_recaptcha_secret'),
+                'secret' => config('services.google_recaptcha_secret'),
                 'response' => $value
             ]
         ]);
