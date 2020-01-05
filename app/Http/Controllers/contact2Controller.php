@@ -29,7 +29,7 @@ class contact2Controller extends Controller
     	$c = $request->input('email');
     	$m = $request->input('message');
 
-    	Mail::to('bermick@gmail.com')->send(new NewContact2($n, $c, $m));
+    	Mail::to('hernandomtz@gmail.com')->send(new NewContact2($n, $c, $m));
         // Mail::to('diego@barrafrancamexico.com')->send(new NewContact2($n, $c, $t, $m));
 
 
