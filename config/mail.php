@@ -1,16 +1,16 @@
 <?php
 
 return [
-    'driver' => 'smtp',
-    'host' => 'smtp.mailgun.org',
-    'port' => 587,
+    'driver' => env('MAIL_DRIVER', 'smtp'),
+    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'port' => env('MAIL_PORT', 587),
     'from' => [
-        'address' => 'contacto@panelmexico.com',
-        'name' => 'Panelmexico',
+        'address' => env('MAIL_FROM_ADDRESS', 'contacto@panelmexico.com'),
+        'name' => env('MAIL_FROM_NAME', 'Panelmexico'),
     ],
-    'encryption' => 'tls',
-    'username' => 'contacto@panelmexico.com',
-    'password' => env('MAIL_PASSWORD', ''),
+    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+    'username' => env('MAIL_USERNAME'),
+    'password' => env('MAIL_PASSWORD'),
     'sendmail' => '/usr/sbin/sendmail -bs',
     'markdown' => [
         'theme' => 'default',
