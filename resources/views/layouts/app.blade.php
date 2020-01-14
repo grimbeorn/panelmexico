@@ -145,6 +145,14 @@
     <script type="text/javascript" src="js/jquery.easypiechart.min.js"></script>
     <script type="text/javascript" src="js/template-scripts.js"></script>
     <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAUPovi8jPa1hqtnt7_0Gdis-DSRAhepS4&callback=initMap"></script> -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12000920-50"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
+      gtag('config', 'UA-12000920-50');
+    </script>
   </body>
 </html>
