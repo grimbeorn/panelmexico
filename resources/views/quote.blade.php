@@ -31,7 +31,7 @@
                     <option value="uso" selected data-default>Uso</option>
                     <option value="cubierta">cubierta</option>
                     <option value="fachada">fachada</option>
-                    <option value="refrigeracion">refrigeración</option>
+                    <!-- <option value="refrigeracion">refrigeración</option> -->
                   </select>
                 </div>
                 <div class="s-12">
@@ -62,7 +62,15 @@
                   </a>
                 </div> -->
                 <div class="s-12">
-                    <button class="button background-yellow border-radius s-12">enviar</button>
+                    <button class="button background-green border-radius s-12">enviar</button>
+                    * cotización sujeta a tipo de cambio<br>
+                    * los precios pueden variar sin previo aviso<br>
+                    * no incluye flete a obra<br>
+                    * para cotizaciones a partir de planos, por favor contáctenos<br>
+
+
+
+
                 </div>
                 <div class="s-12 button-parent"></div> 
                 @if (session('notification'))
@@ -116,8 +124,8 @@ $(document).ready(function() {
 
 <script type="text/javascript">
   var useAndThickness = {};
-  useAndThickness['cubierta'] = ['30 mm', '40 mm', '50 mm','60 mm','80 mm','100 mm','120 mm'];
-  useAndThickness['fachada'] = ['35 mm', '40 mm', '50 mm','60 mm','80 mm'];
+  useAndThickness['cubierta'] = ['30 mm', '40 mm', '50 mm'];
+  useAndThickness['fachada'] = ['35 mm', '40 mm', '50 mm'];
   useAndThickness['refrigeracion'] = ['50 mm','60 mm','80 mm','100 mm','120 mm','150 mm'];
   var features = {};
   features['cubierta'] = ['• Espesor del panel: 30, 40, 50, 60, 80, 100, 120 mm.', '• Ancho útil: 1,000 mm.', '• Longitud: Hasta 16,000 mm', '• Máximo recomendado 13,000 mm.','• Ámbito de aplicación: Cubiertas','• Nervado exterior: Dos grecas / Tres grecas','• Nevado interior: Standard / Liso','• Núcleo: Poliuretano (PUR) / Poliisocianurato (PIR)','• Densidad del núcleo: EN1602 40 Kg/m3 (+/- 10%)','• Resistencia a tracción: EN1607 > 0.060Mpa','• Resistencia a compresión: EN826 > 0,100 Mpa','• Resistencia a la flexión: > 0,100 Mpa','• Reacción al fuego: F/Bs2d0/Bs1d0','• Permeabilidad al agua: Clase A'];

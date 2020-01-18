@@ -23,7 +23,7 @@
             <div class="item">
               <div class="s-12">
                 <p class="animated-element slow margin-bottom-30" align="justify">
-				        	Nuestros paneles concilian actuales <b>tendencias arquitectónicas</b> con las más exigentes demandas funcionales, cubriendo las necesidades de cualquier tipo de proyecto: <b>cubiertas, fachadas, cámaras frigoríficas, falsos techos y divisiones</b>.</br>
+				        	<b>Panelméxico</b> somos una comercializadora de paneles europeos que concilian actuales <b>tendencias arquitectónicas</b> con las más exigentes demandas funcionales, cubriendo las necesidades de cualquier tipo de proyecto: <b>cubiertas, fachadas, cámaras frigoríficas, falsos techos y divisiones</b>.</br>
 				        	Poseemos una amplia gama de paneles adaptados a diferentes sectores de construcción: industrial, comercial, residencial, modular, agropecuaria e industria del frío (sector agroalimentario).</br></br>
 				        	Todos nuestros paneles ofrecen unas <b>inmejorables características técnicas</b> que responden a las <b>normativas más exigentes</b>, pero sin renunciar a las demandas estéticas y de libertad creativa del proyecto. Esto nos permite ofrecerle una respuesta adecuada a nivel técnico, estético y funcional, sin olvidar el <b>respeto al medio ambiente</b>, en una óptica de desarrollo sostenible, avalado por la certificación <b>ISO14000:2004</b>.</br>
 				        </p>
