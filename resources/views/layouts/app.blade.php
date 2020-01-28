@@ -111,7 +111,7 @@
             </div>
             <div class="s-12 m-6 l-3 xl-3">
                <h4 class="text-white text-strong margin-m-top-30">Contacto CDMX</h4>
-                <p><i class="icon-sli-screen-smartphone text-primary"></i> 55 8421 4610</p>
+                <p><i class="icon-sli-screen-smartphone text-primary"></i> 55 9191 2790</p>
                 <a class="text-primary-hover" href="mailto:contacto@panelmexico.mx"> <i class="icon-sli-mouse text-primary"> </i> contacto@panelmexico.com</a><br>
                 <a class="text-primary-hover" href="mailto:proyectos@panelmexico.mx"> <i class="icon-sli-mouse text-primary"> </i> proyectos@panelmexico.com</a>
             </div>
@@ -127,7 +127,7 @@
       <section class="padding-2x background-dark full-width">
         <div class="line">
           <div class="s-12 l-6">
-            <p class="text-size-12">Copyright 2019, Orange Code Design - Madrid</p>
+            <p class="text-size-12">Copyright 2020, Orange Code Design - Madrid</p>
             <!-- <p class="text-size-12">All images have been purchased from Bigstock. Do not use the images in your website.</p> -->
           </div>
           <div class="s-12 l-6">

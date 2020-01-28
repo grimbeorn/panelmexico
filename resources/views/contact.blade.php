@@ -9,7 +9,7 @@
       <h1 class="animated-element slow text-extra-thin text-white text-s-size-30 text-m-size-40 text-size-50 text-line-height-1 margin-bottom-30 margin-top-130">
         CONTACTO
       </h1>
-      <p class="animated-element text-white">Encuéntranos</p>
+      <!-- <p class="animated-element text-white">Encuéntranos</p> -->
       
       <!-- white full width arrow object -->
       <img class="arrow-object" src="img/arrow-object-white.svg" alt="">
@@ -20,7 +20,7 @@
     <!-- Section 1 -->
     <section class="section-small-padding background-white text-center">      
       <div class="line">
-        <h2 class="text-dark text-size-50 text-m-size-40">¿ Dónde <b>Estamos ?</b></h2>
+        <h2 class="text-dark text-size-50 text-m-size-40">¿ Dónde <b>encontrarnos ?</b></h2>
       </div>                                                                                                    
     </section>
     <section class="section background-white" style="padding: 15px;">
@@ -35,9 +35,7 @@
                 </div>
                 <div class="margin-left-60">
                   <h2 class="text-size-20 margin-bottom-10 text-strong">Dirección</h2>                
-                  <p>Colina de Buenaventura 47</p>
-                  <p>Boulevares, Naucalpan</p>
-                  <p>Estado de México, C.P. 53110</p>             
+                  <p>Estado de México, México</p>             
                 </div>
               </div>
               
@@ -57,7 +55,7 @@
                 </div>
                 <div class="margin-left-60">
                   <h2 class="text-size-20 margin-bottom-10 text-strong">Teléfono</h2>                
-                  <p>55 8421 4610</p>            
+                  <p>55 9191 2790</p>            
                 </div>
               </div>
             </div>
