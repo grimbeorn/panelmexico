@@ -15,17 +15,15 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('use');
-            $table->string('name');
-            $table->string('description');
-            $table->text('long_description');
-            $table->integer('thickness');
-            $table->float('m2PerContainer');
-            $table->float('exWorksCost');
-            $table->float('freightCost');
-            $table->float('importationCost');
-            $table->float('indirectCost');
-            $table->float('profit');
+            $table->string('use')->nullable();
+            $table->string('name')->nullable();
+            $table->string('description')->nullable();
+            $table->text('long_description')->nullable();
+            $table->integer('thickness')->nullable();
+            $table->float('m2PerContainer')->nullable();
+            $table->float('cipCost')->nullable();
+            $table->float('indirectCost')->nullable();
+            $table->float('profit')->nullable();
             $table->timestamps();
         });
     }

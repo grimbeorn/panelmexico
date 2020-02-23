@@ -3,14 +3,11 @@
 @section('content')
 <main role="main">
   <article>    
-    <!-- Header -->
     <header class="section background-image text-center" style="background-image:url(img/bigStockFoto/1a.jpg)">
-      <h1 class="animated-element slow text-extra-thin text-white text-s-size-30 text-m-size-40 text-size-50 text-line-height-1 margin-bottom-30 margin-top-130">
-        PRESUPUESTOS
-      </h1>
-      <p class="animated-element text-white">Nuestros Precios</p>
-      <img class="arrow-object" src="img/arrow-object-white.svg" alt="">
-    </header>
+    <h1 class="animated-element slow text-extra-thin text-white text-s-size-30 text-m-size-40 text-size-50 text-line-height-1 margin-bottom-30 margin-top-130">PRESUPUESTOS</h1>
+    <p class="animated-element text-white">Nuestros Precios</p>
+    <img class="arrow-object" src="img/arrow-object-white.svg" alt="">
+  </header>
     <!-- Section 1 -->
     <section class="section-small-padding background-white text-center">      
       <div class="line">
@@ -24,14 +21,13 @@
             <form name="quoteForm" class="customform needs-validation" action="{{ url('/quote') }}" method="post" enctype="multipart/form-data" novalidate>
               {{ csrf_field() }}            
               <div class="line">  
-
-
                 <div class="s-12">
-                  <select id="use" name="use" onchange="ChangeUseList(); myFunction()" class="form-control required">
+                  <select id="use" name="use" onchange="ChangeUseList()" class="form-control required">
+                  <!-- <select id="use" name="use" onchange="ChangeUseList(); myFunction()" class="form-control required"> -->
                     <option value="uso" selected data-default>Uso</option>
                     <option value="cubierta">cubierta</option>
                     <option value="fachada">fachada</option>
-                    <!-- <option value="refrigeracion">refrigeración</option> -->
+                    <option value="refrigeracion">refrigeración</option>
                   </select>
                 </div>
                 <div class="s-12">
@@ -39,8 +35,6 @@
                     <option value="" selected data-default>Espesor</option>
                   </select>
                 </div>
-
-
                 <div class="s-12">
                   <input id="cantidad" oninput="myFunction()" name="cantidad" class="form-group required" placeholder="cantidad [m2]">
                 </div>
@@ -63,14 +57,10 @@
                 </div> -->
                 <div class="s-12">
                     <button class="button background-green border-radius s-12">enviar</button>
-                    * cotización sujeta a tipo de cambio<br>
+                    <!-- * cotización sujeta a tipo de cambio<br>
                     * los precios pueden variar sin previo aviso<br>
                     * no incluye flete a obra<br>
-                    * para cotizaciones a partir de planos, por favor contáctenos<br>
-
-
-
-
+                    * para cotizaciones a partir de planos, por favor contáctenos<br> -->
                 </div>
                 <div class="s-12 button-parent"></div> 
                 @if (session('notification'))
@@ -92,13 +82,13 @@
               </div>
             </form>
           </div>
-          <div class="m-12 l-6">
+          <!-- <div class="m-12 l-6">
             <div class="line">
               <div class="l-12 xl-9 center">
                 <div class="s-12 m-12 l-12"> 
                   <div class="animated-element pricing-recommended pricing-table margin-bottom-30">
                     <p id="p01" name="p01" class="pricing-price text-dark text-strong margin-bottom-10 text-center"> 
-                      <span id="price" name="price">0.00</span> MXN *
+                      <span id="price" name="price"></span>
                     </p>
                     <ul id="features">
                     </ul>
@@ -106,7 +96,7 @@
                 </div> 
               </div>  
             </div>       
-          </div>
+          </div> -->
         </div>
       </div>    
     </section>
@@ -114,12 +104,12 @@
 </main>
 
 <script type="text/javascript">
-$(document).ready(function() {
-  var cantidad2 = document.getElementById("cantidad").value;
-  if (cantidad2==0 || cantidad2 =="" || cantidad2 =="0"){
-    document.getElementById("price").innerHTML = "$ 0.00";
-  }
-});
+// $(document).ready(function() {
+//   var cantidad2 = document.getElementById("cantidad").value;
+//   if (cantidad2==0 || cantidad2 =="" || cantidad2 =="0"){
+//     document.getElementById("price").innerHTML = "$ 0.00";
+//   }
+// });
 </script>
 
 <script type="text/javascript">
@@ -192,12 +182,6 @@ function myFunction() {
       }
     }); 
   }
-
-  // if (document.getElementById("use").value == "Uso") {
-  //   console.log("uso");
-  // }
-
-
 
 
 }
