@@ -29,7 +29,7 @@ class PrecioController extends Controller
       $iva = 0.16;
 
       $numContenedores = ceil($cantidad/$m2PerContainer);
-      $costoImportPorM2 = $numContenedores/$cantidad;
+      $costoImportPorM2 = (9500*$numContenedores)/$cantidad;
       $precioBaseUnitario = ($cipCost + $costoImportPorM2 + $indirectCost)*(1+$profit);    
       $ivaUnitario = $precioBaseUnitario*$iva;
       $precioFinalUnitario = $precioBaseUnitario + $ivaUnitario;

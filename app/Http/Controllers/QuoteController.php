@@ -92,7 +92,7 @@ class quoteController extends Controller
       $iva = 0.16;
 
       $numContenedores = ceil($q/$m2PerContainer);
-      $costoImportPorM2 = $numContenedores/$q;
+      $costoImportPorM2 = (9500*$numContenedores)/$q;
       $precioBaseUnitario = ($cipCost + $costoImportPorM2 + $indirectCost)*(1+$profit);    
       $ivaUnitario = $precioBaseUnitario*$iva;
       $precioFinalUnitario = $precioBaseUnitario + $ivaUnitario;
