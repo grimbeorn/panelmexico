@@ -21,23 +21,20 @@ class PrecioController extends Controller
       foreach ($result as $result1) {
       }
 
-      $costoExWorks = $result1->exWorksCost;
-      $costoFlete = $result1->freightCost;
-      $costoImport = $result1->importationCost;
-      $indirecto = 1;
-      $profit = $result1->profit;
+      $cipCost = $result1->cipCost;
       $m2PerContainer = $result1->m2PerContainer;
 
+      $indirectCost = 40;
+      $profit = 0.35;
+      $iva = 0.16;
+
       $numContenedores = ceil($cantidad/$m2PerContainer);
-      $costoMaterial = $cantidad*$costoExWorks;
-      $utilidad=$costoMaterial*$profit;
-      $costoFlete=2500*$numContenedores;
-      $costoImport=2750*$numContenedores;
-      $costoIndirect=$cantidad*1;
+      $costoImportPorM2 = $numContenedores/$cantidad;
+      $precioBaseUnitario = ($cipCost + $costoImportPorM2 + $indirectCost)*(1+$profit);    
+      $ivaUnitario = $precioBaseUnitario*$iva;
+      $precioFinalUnitario = $precioBaseUnitario + $ivaUnitario;
 
-      $precioUnit=(($costoMaterial+$utilidad+$costoFlete+$costoImport+$costoIndirect)/$cantidad)*20;
-      $precioTotal=$precioUnit*$cantidad;
-
+      $precioTotal = $precioFinalUnitario*$cantidad;
 
       echo($precioTotal);
 

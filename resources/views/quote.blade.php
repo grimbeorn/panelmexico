@@ -39,8 +39,6 @@
                     <option value="" selected data-default>Espesor</option>
                   </select>
                 </div>
-
-
                 <div class="s-12">
                   <input id="cantidad" oninput="myFunction()" name="cantidad" class="form-group required" placeholder="cantidad [m2]">
                 </div>
@@ -67,9 +65,6 @@
                     * los precios pueden variar sin previo aviso<br>
                     * no incluye flete a obra<br>
                     * para cotizaciones a partir de planos, por favor contáctenos<br>
-
-
-
 
                 </div>
                 <div class="s-12 button-parent"></div> 

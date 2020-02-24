@@ -83,27 +83,49 @@ class quoteController extends Controller
 
     foreach ($query1 as $query) {}
 
-    $costoExWorks = $query->exWorksCost;
-    $costoFlete = $query->freightCost;
-    $costoImport = $query->importationCost;
-    $long_description = $query->long_description;
-    $indirecto = 1;
-    $profit = $query->profit;
-    $m2PerContainer = $query->m2PerContainer;
-    $numContenedores = ceil($q/$m2PerContainer);
-    $costoMaterial = $q*$costoExWorks;
-    $utilidad=$costoMaterial*$profit;
-    $costoFlete=2500*$numContenedores;
-    $costoImport=2750*$numContenedores;
-    $costoIndirect=$q*1;
-    $precioUnit=(($costoMaterial+$utilidad+$costoFlete+$costoImport+$costoIndirect)/$q)*20;
-    $precioTotal=$precioUnit*$q;
-    $iva = $precioTotal*0.16;
-    $total = $precioTotal+$iva;
-    $fecha1 = new DateTime();
-    $fecha = $fecha1->format('Y-m-d H:i:s');
+      $cipCost = $query->cipCost;
+      $m2PerContainer = $query->m2PerContainer;
+      $long_description = $query->long_description;
 
-    $product_data = array("name"=>$n, "email"=>$c, "use"=>$u, "cantidad"=>$q, "long_description"=>$long_description, "precioUnit"=>$precioUnit, "iva"=>$iva, "precioTotal"=>$precioTotal, "total"=>$total, "fecha"=>$fecha);
+      $indirectCost = 40;
+      $profit = 0.35;
+      $iva = 0.16;
+
+      $numContenedores = ceil($q/$m2PerContainer);
+      $costoImportPorM2 = $numContenedores/$q;
+      $precioBaseUnitario = ($cipCost + $costoImportPorM2 + $indirectCost)*(1+$profit);    
+      $ivaUnitario = $precioBaseUnitario*$iva;
+      $precioFinalUnitario = $precioBaseUnitario + $ivaUnitario;
+
+      $pBUxCantidad = $precioBaseUnitario*$q;
+      $ivaxCantidad = $q*$pBUxCantidad;
+
+      $precioTotal = $precioFinalUnitario*$q;
+
+      $fecha1 = new DateTime();
+      $fecha = $fecha1->format('Y-m-d H:i:s');
+
+    // $costoExWorks = $query->exWorksCost;
+    // $costoFlete = $query->freightCost;
+    // $costoImport = $query->importationCost;
+    // $long_description = $query->long_description;
+    // $indirecto = 1;
+    // $profit = $query->profit;
+    // $m2PerContainer = $query->m2PerContainer;
+    // $numContenedores = ceil($q/$m2PerContainer);
+    // $costoMaterial = $q*$costoExWorks;
+    // $utilidad=$costoMaterial*$profit;
+    // $costoFlete=2500*$numContenedores;
+    // $costoImport=2750*$numContenedores;
+    // $costoIndirect=$q*1;
+    // $precioUnit=(($costoMaterial+$utilidad+$costoFlete+$costoImport+$costoIndirect)/$q)*20;
+    // $precioTotal=$precioUnit*$q;
+    // $iva = $precioTotal*0.16;
+    // $total = $precioTotal+$iva;
+    // $fecha1 = new DateTime();
+    // $fecha = $fecha1->format('Y-m-d H:i:s');
+
+    $product_data = array("name"=>$n, "email"=>$c, "use"=>$u, "cantidad"=>$q, "long_description"=>$long_description, "precioBaseUnitario"=>$precioBaseUnitario, "ivaxCantidad"=>$ivaxCantidad, "pBUxCantidad"=>$pBUxCantidad, "precioTotal"=>$precioTotal, "fecha"=>$fecha);
 
     $output = '  
       <html>
@@ -176,13 +198,13 @@ class quoteController extends Controller
                       '.$product_data["cantidad"].'
                   </td>
                   <td align="right" style="font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 14px; border-bottom: 1px solid black; line-height: 35px; padding: 5px;">
-                      '.$product_data["precioUnit"].'
+                      '.$product_data["precioBaseUnitario"].'
                   </td>
                   <td align="right" style="font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 14px; border-bottom: 1px solid black; line-height: 35px; padding: 5px;">
                       IVA
                   </td>
                   <td align="right" style="font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 14px; border-bottom: 1px solid black; line-height: 35px; padding: 5px;">
-                      '.$product_data["precioTotal"].'
+                      '.$product_data["pBUxCantidad"].'
                   </td>
               </tr>
               <tr>
@@ -194,7 +216,7 @@ class quoteController extends Controller
                   <td style=""></td>
                   <td style=""></td>
                   <td align="right" style=" font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 35px;"><b>Subtotal</b></td>
-                  <td align="right" style=" font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 14px;">'.$product_data["precioTotal"].'</td>
+                  <td align="right" style=" font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 14px;">'.$product_data["pBUxCantidad"].'</td>
               </tr>
               <!-- 7o renglón: IVA -->
               <tr>
@@ -202,7 +224,7 @@ class quoteController extends Controller
                   <td style=""></td>
                   <td style=""></td>
                   <td align="right" style=" font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 35px;">IVA</td>
-                  <td align="right" style=" font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 14px;">'.$product_data["iva"].'</td>
+                  <td align="right" style=" font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 14px;">'.$product_data["ivaxCantidad"].'</td>
               </tr>
               <!-- 8o renglón: TOTAL -->
               <tr>
@@ -210,7 +232,7 @@ class quoteController extends Controller
                   <td style=""></td>
                   <td style=""></td>
                   <td align="right" style=" font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 35px;"><b>Total</b></td>
-                  <td align="right" style=" font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 14px;">'.$product_data["total"].'</td>
+                  <td align="right" style=" font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 14px;">'.$product_data["precioTotal"].'</td>
               </tr>
 
           </table>
@@ -237,15 +259,7 @@ class quoteController extends Controller
       Mail::to($emails)->send(new FileDownloaded($a));
 
       $notification = "el correo ha sido enviado";
-      return back()->with(compact('notification'));
-    
+      return back()->with(compact('notification')); 
 
   }
-
-
-
-
 }
-
- 
-
