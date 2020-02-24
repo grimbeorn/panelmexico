@@ -138,8 +138,8 @@
       </section>
     </footer>
     <!-- <script src="{{ asset('js/bootstrap.min.js') }}"></script> -->
-    <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    // <script type="text/javascript" src="js/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
+    <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
     <script type="text/javascript" src="js/responsee.js"></script>
     <script type="text/javascript" src="js/plugins.min.js"></script>
     <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>

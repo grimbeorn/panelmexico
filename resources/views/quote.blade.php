@@ -27,7 +27,7 @@
                     <option value="uso" selected data-default>Uso</option>
                     <option value="cubierta">cubierta</option>
                     <option value="fachada">fachada</option>
-                    <option value="refrigeracion">refrigeración</option>
+                    <!-- <option value="refrigeracion">refrigeración</option> -->
                   </select>
                 </div>
                 <div class="s-12">
@@ -57,10 +57,10 @@
                 </div> -->
                 <div class="s-12">
                     <button class="button background-green border-radius s-12">enviar</button>
-                    <!-- * cotización sujeta a tipo de cambio<br>
+                    * cotización sujeta a tipo de cambio<br>
                     * los precios pueden variar sin previo aviso<br>
                     * no incluye flete a obra<br>
-                    * para cotizaciones a partir de planos, por favor contáctenos<br> -->
+                    * para cotizaciones a partir de planos, por favor contáctenos<br>
                 </div>
                 <div class="s-12 button-parent"></div> 
                 @if (session('notification'))
@@ -82,7 +82,7 @@
               </div>
             </form>
           </div>
-          <!-- <div class="m-12 l-6">
+          <div class="m-12 l-6">
             <div class="line">
               <div class="l-12 xl-9 center">
                 <div class="s-12 m-12 l-12"> 
@@ -96,7 +96,7 @@
                 </div> 
               </div>  
             </div>       
-          </div> -->
+          </div>
         </div>
       </div>    
     </section>
@@ -104,12 +104,12 @@
 </main>
 
 <script type="text/javascript">
-// $(document).ready(function() {
-//   var cantidad2 = document.getElementById("cantidad").value;
-//   if (cantidad2==0 || cantidad2 =="" || cantidad2 =="0"){
-//     document.getElementById("price").innerHTML = "$ 0.00";
-//   }
-// });
+$(document).ready(function() {
+  var cantidad2 = document.getElementById("cantidad").value;
+  if (cantidad2==0 || cantidad2 =="" || cantidad2 =="0"){
+    document.getElementById("price").innerHTML = "$ 0.00";
+  }
+});
 </script>
 
 <script type="text/javascript">
