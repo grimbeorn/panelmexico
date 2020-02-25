@@ -22,6 +22,7 @@ class PrecioController extends Controller
       }
 
       $cipCost = $result1->cipCost;
+<<<<<<< HEAD
       $profit = $result1->profit;
       $m2PerContainer = $result1->m2PerContainer;
 
@@ -36,6 +37,21 @@ class PrecioController extends Controller
       $precioFinal = $precioFinalUnitario*$q;
       $ivaFinal = $precioFinal*0.16;
       $precioTotal = $precioFinal+$ivaFinal;
+=======
+      $m2PerContainer = $result1->m2PerContainer;
+
+      $indirectCost = 40;
+      $profit = 0.35;
+      $iva = 0.16;
+
+      $numContenedores = ceil($cantidad/$m2PerContainer);
+      $costoImportPorM2 = (9500*$numContenedores)/$cantidad;
+      $precioBaseUnitario = ($cipCost + $costoImportPorM2 + $indirectCost)*(1+$profit);    
+      $ivaUnitario = $precioBaseUnitario*$iva;
+      $precioFinalUnitario = $precioBaseUnitario + $ivaUnitario;
+
+      $precioTotal = $precioFinalUnitario*$cantidad;
+>>>>>>> temporal
 
       echo($precioTotal);
 

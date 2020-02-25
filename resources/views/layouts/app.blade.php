@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Panel México | Panel Industrial</title>
+    <title>Panel México | Panel Industrial |</title>
     <!-- <link rel="shortcut icon" type="image/png" href="{{ asset('favicon.png') }}"> -->
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
@@ -137,6 +137,17 @@
         </div>  
       </section>
     </footer>
+
+
+
+
+
+
+    <!-- x -->
+
+
+
+
     <!-- <script src="{{ asset('js/bootstrap.min.js') }}"></script> -->
     <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
     <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->

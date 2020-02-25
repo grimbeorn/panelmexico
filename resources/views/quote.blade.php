@@ -61,6 +61,10 @@
                     * los precios pueden variar sin previo aviso<br>
                     * no incluye flete a obra<br>
                     * para cotizaciones a partir de planos, por favor contáctenos<br>
+<<<<<<< HEAD
+=======
+
+>>>>>>> temporal
                 </div>
                 <div class="s-12 button-parent"></div> 
                 @if (session('notification'))
@@ -88,7 +92,11 @@
                 <div class="s-12 m-12 l-12"> 
                   <div class="animated-element pricing-recommended pricing-table margin-bottom-30">
                     <p id="p01" name="p01" class="pricing-price text-dark text-strong margin-bottom-10 text-center"> 
+<<<<<<< HEAD
                       <span id="price" name="price"></span>
+=======
+                      <span id="price" name="price">0.00</span> MXN*
+>>>>>>> temporal
                     </p>
                     <ul id="features">
                     </ul>
