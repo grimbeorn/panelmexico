@@ -93,7 +93,7 @@
                 <div class="s-12 m-12 l-12"> 
                   <div class="animated-element pricing-recommended pricing-table margin-bottom-30">
                     <p id="p01" name="p01" class="pricing-price text-dark text-strong margin-bottom-10 text-center"> 
-                      <span id="price" name="price">0.00</span> MXN *
+                      <span id="price" name="price">0.00</span> MXN*
                     </p>
                     <ul id="features">
                     </ul>
