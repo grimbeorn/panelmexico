@@ -61,10 +61,7 @@
                     * los precios pueden variar sin previo aviso<br>
                     * no incluye flete a obra<br>
                     * para cotizaciones a partir de planos, por favor contáctenos<br>
-<<<<<<< HEAD
-=======
 
->>>>>>> temporal
                 </div>
                 <div class="s-12 button-parent"></div> 
                 @if (session('notification'))
