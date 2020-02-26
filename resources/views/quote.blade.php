@@ -22,8 +22,8 @@
               {{ csrf_field() }}            
               <div class="line">  
                 <div class="s-12">
-                  <select id="use" name="use" onchange="ChangeUseList()" class="form-control required">
-                  <!-- <select id="use" name="use" onchange="ChangeUseList(); myFunction()" class="form-control required"> -->
+                  <!-- <select id="use" name="use" onchange="ChangeUseList()" class="form-control required"> -->
+                  <select id="use" name="use" onchange="ChangeUseList(); myFunction()" class="form-control required">
                     <option value="uso" selected data-default>Uso</option>
                     <option value="cubierta">cubierta</option>
                     <option value="fachada">fachada</option>
@@ -57,6 +57,7 @@
                 </div> -->
                 <div class="s-12">
                     <button class="button background-green border-radius s-12">enviar</button>
+                    * IVA incluido
                     * cotización sujeta a tipo de cambio<br>
                     * los precios pueden variar sin previo aviso<br>
                     * no incluye flete a obra<br>
@@ -89,9 +90,6 @@
                 <div class="s-12 m-12 l-12"> 
                   <div class="animated-element pricing-recommended pricing-table margin-bottom-30">
                     <p id="p01" name="p01" class="pricing-price text-dark text-strong margin-bottom-10 text-center"> 
-
-                      <span id="price" name="price"></span>
-
                       <span id="price" name="price">0.00</span> MXN*
                    </p>
                     <ul id="features">
