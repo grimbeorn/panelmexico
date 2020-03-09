@@ -36,6 +36,18 @@
                   </select>
                 </div>
                 <div class="s-12">
+
+
+
+
+
+
+                  <!-- revisión //////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
                   <input id="cantidad" oninput="myFunction()" name="cantidad" class="form-group required" placeholder="cantidad [m2]">
                 </div>
                 <input name="full-name-field" type="text" id="full-name-field" class="full-name-field" />
@@ -167,6 +179,9 @@ function myFunction() {
   if (cantidad == 0 || cantidad == "" || cantidad == "0" || uso == "Uso"){
     document.getElementById("price").innerHTML = "$ 0.00";
   } else {
+
+    // revisión ///////////////////////////////////////////////////////////////////////////////
+
     $.ajax({
       type:"POST",
       data: {uso:uso, espesor:espesor, cantidad:cantidad},

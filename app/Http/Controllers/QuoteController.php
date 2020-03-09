@@ -85,7 +85,7 @@ class quoteController extends Controller
       $precioFinalUnitario = $precioBaseUnitario + $ivaUnitario;
 
       $pBUxCantidad = $precioBaseUnitario*$q;
-      $ivaxCantidad = $q*$pBUxCantidad;
+      $ivaxCantidad = $iva*$pBUxCantidad;
 
       $precioTotal = $precioFinalUnitario*$q/1000;
 
@@ -120,8 +120,6 @@ class quoteController extends Controller
                           </td>
                           <td style=" font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 24px;" align="right">
                             Barrafranca S.A. de C.V.<br>
-                            Colina de Buenaventura 47<br>
-                            Boulevares, Naucalpan, C.P. 53110<br>
                             contacto@panelmexico.com<br>
                             55 8421 4610
                           </td>

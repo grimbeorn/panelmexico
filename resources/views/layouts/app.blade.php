@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panel México | Panel Industrial</title>
-    <!-- <link rel="shortcut icon" type="image/png" href="{{ asset('favicon.png') }}"> -->
     <link rel="shortcut icon" type="image/png" href="favicon.png">
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/responsee.css">
@@ -18,8 +16,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,700,900&amp;subset=latin-ext" rel="stylesheet"> 
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
-    
     <script type="text/javascript" src="js/validation.js"></script>
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     {!! htmlScriptTagJsApi(['action' => 'homepage']) !!}
@@ -73,7 +71,6 @@
                 <li><a href="{{ url('/cotizador') }}">Cotizador</a></li>
                 <li><a href="{{ url('/contacto') }}">Contacto</a></li>
              </ul> 
-          <!-- <div style="float: right"><p style="padding-right: 10px" color:"white">texto</p></div> -->
           </div>
         </div>
       </nav>
@@ -84,12 +81,6 @@
       @yield('content')    
     </main>
     
-    <!-- Social -->
-    <!-- <div class="background-primary padding text-center">
-      <a href="/"><i class="icon-facebook_circle text-size-25 text-blue"></i></a> 
-      <a href="/"><i class="icon-instagram_circle text-size-25 text-blue"></i></a> 
-      <a href="/"><i class="icon-linked_in_circle text-size-25 text-blue"></i></a>                                                                       
-    </div> -->
     <!-- FOOTER -->
     <footer>
       <!-- Main Footer -->
@@ -129,7 +120,6 @@
         <div class="line">
           <div class="s-12 l-6">
             <p class="text-size-12">Copyright 2020, Orange Code Design - Madrid</p>
-            <!-- <p class="text-size-12">All images have been purchased from Bigstock. Do not use the images in your website.</p> -->
           </div>
           <div class="s-12 l-6">
             <a class="right text-size-12 text-primary-hover" title="Responsee - lightweight responsive framework">Design and coding<br> by Orange Code</a>
@@ -140,18 +130,11 @@
 
     <!-- xxx -->
 
-
-
-
-    <!-- <script src="{{ asset('js/bootstrap.min.js') }}"></script> -->
-    <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
-    <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
     <script type="text/javascript" src="js/responsee.js"></script>
     <script type="text/javascript" src="js/plugins.min.js"></script>
     <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
     <script type="text/javascript" src="js/jquery.easypiechart.min.js"></script>
     <script type="text/javascript" src="js/template-scripts.js"></script>
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAUPovi8jPa1hqtnt7_0Gdis-DSRAhepS4&callback=initMap"></script> -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12000920-50"></script>
     <script>
