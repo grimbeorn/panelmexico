@@ -121,7 +121,7 @@ class quoteController extends Controller
                           <td style=" font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 24px;" align="right">
                             Barrafranca S.A. de C.V.<br>
                             contacto@panelmexico.com<br>
-                            55 8421 4610
+                            55 9191 2790
                           </td>
                         </tr>
 
